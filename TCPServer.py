@@ -15,10 +15,10 @@ while True:
     client, address = server.accept()
     print(f"Connected to {address}")
     # รับข้อมูล 1024 bytes
-    print(client.recv(1024).decode('utf-8'))
+    print(client.recv(1).decode('utf-8'))
     # ส่งข้อมูลกลับ
-    client.send("Hello Client!".encode('utf-8'))
-    print(client.recv(1024).decode('utf-8'))
+    client.send("Hello TCP!".encode('utf-8'))
+    print(client.recv(1).decode('utf-8'))
     client.send("Bye!".encode('utf-8'))
     # ปิดClient
     client.close()
