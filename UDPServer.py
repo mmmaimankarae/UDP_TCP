@@ -12,6 +12,7 @@ while True:
         # buffer size ถ้าไม่มากพอข้อมูลอาจจะตกหล่น
     # recvform funtion return >> ค่า(ข้อมูล)ที่ส่งมา, IP Address
     message, address = server.recvfrom(1024)
+    print(f"Connected to {address}")
     print(message.decode('utf-8'))
     
     # ส่งข้อมูลกลับ
